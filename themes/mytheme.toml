@@ -1,0 +1,19 @@
+#inherits = "dark_high_contrast"
+inherits = "adwaita-dark"
+
+# Override the theming for "keyword"s:
+#"keyword" = { fg = "gold" }
+"comment" = "#00DDDD"
+#"ui.virtual.inlay-hint" = "#FF0000"
+#"ui.virtual.inlay-hint.parameter" = "#FF0000"
+#"ui.virtual.inlay-hint.type" = "#00FF00"
+"ui.virtual.inlay-hint" = "#008800"
+"ui.virtual.inlay-hint.parameter" = "#008800"
+"ui.virtual.inlay-hint.type" = "#008800"
+#"error" = "white"
+
+# Override colors in the palette:
+[palette]
+red = "#DF5f5f"
+#berry = "#2A2A4D"
+

@@ -1,0 +1,66 @@
+# theme = "onedark"
+# theme = "base16_transparent"
+# theme = "adwaita-dark"
+theme = "mytheme"
+
+
+[editor]
+# line-number = "relative"
+mouse = false
+# true-color = true
+auto-save = true
+
+# Minimum severity to show a diagnostic after the end of a line:
+#end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+# Minimum severity to show a diagnostic on the primary cursor's line.
+# Note that `cursor-line` diagnostics are hidden in insert mode.
+cursor-line = "hint"
+# Minimum severity to show a diagnostic on other lines:
+other-lines = "hint"
+
+[editor.cursor-shape]
+#insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.soft-wrap]
+enable = true
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+# center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+# C-s = ":w" # Maps Ctrl-s to the typable command :w which is an alias for :write (save file)
+#"A-h" = ":toggle lsp.display-inlay-hints"
+
+[keys.normal.space]
+I = ":toggle lsp.display-inlay-hints"
+i = ":w"
+
+[keys.insert]
+"A-x" = "normal_mode"     # Maps Alt-X to enter normal mode
+# C-s = ":w"
+
+# create a new minor mode bound to `+`
+[keys.normal."+"]
+m = ":run-shell-command make"
+c = ":run-shell-command cargo build"
+t = ":run-shell-command cargo test"
