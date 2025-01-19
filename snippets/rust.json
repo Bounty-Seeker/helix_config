@@ -1,0 +1,197 @@
+{ 
+    "pub(crate) fn": {
+        "prefix": "pcfn",
+        "body": [
+            "pub(crate) fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {",
+            "    ${5:todo!();}",
+            "}"
+        ],
+        "description": "pub(crate) fn …(…) { … }"
+    },
+    "pub(super) fn": {
+        "prefix": "psfn",
+        "body": [
+            "pub(super) fn ${1:name}(${2:arg}: ${3:Type}) -> ${4:RetType} {",
+            "    ${5:todo!();}",
+            "}"
+        ],
+        "description": "pub(super) fn …(…) { … }"
+    },
+
+
+    "pub(crate) trait": {
+        "prefix": "pctrait",
+        "body": ["pub(crate) trait ${1:Name} {", "    ${2:// add code here}", "}", ""],
+        "description": "pub(crate) trait … { … }"
+    },
+    "pub(super) trait": {
+        "prefix": "pstrait",
+        "body": ["pub(super) trait ${1:Name} {", "    ${2:// add code here}", "}", ""],
+        "description": "pub(super) trait … { … }"
+    },
+
+
+    "pub(crate) type": {
+        "prefix": "pctype",
+        "body": ["pub(crate) type ${1:Alias} = ${2:Type};"],
+        "description": "pub(crate) type … = …;"
+    },
+    "pub(super) type": {
+        "prefix": "pstype",
+        "body": ["pub(super) type ${1:Alias} = ${2:Type};"],
+        "description": "pub(super) type … = …;"
+    },
+
+
+    "pub(crate) const": {
+        "prefix": "pcconst",
+        "body": ["pub(crate) const ${1:CONST}: ${2:Type} = ${4:init};"],
+        "description": "pub(crate) const …: … = …;"
+    },  
+    "pub(super) const": {
+        "prefix": "psconst",
+        "body": ["pub(super) const ${1:CONST}: ${2:Type} = ${4:init};"],
+        "description": "pub(super) const …: … = …;"
+    },  
+
+
+    "pub enum": {
+        "prefix": "penum",
+        "body": [
+            "#[derive(Debug)]",
+            "pub enum ${1:Name} {",
+            "    ${2:Variant1},",
+            "    ${3:Variant2},",
+            "}"
+        ],
+        "description": "pub enum … { … }"
+    },
+    "pub(super) enum": {
+        "prefix": "psenum",
+        "body": [
+            "#[derive(Debug)]",
+            "pub(super) enum ${1:Name} {",
+            "    ${2:Variant1},",
+            "    ${3:Variant2},",
+            "}"
+        ],
+        "description": "pub(super) enum … { … }"
+    },
+    "pub(crate) enum": {
+        "prefix": "pcenum",
+        "body": [
+            "#[derive(Debug)]",
+            "pub(crate) enum ${1:Name} {",
+            "    ${2:Variant1},",
+            "    ${3:Variant2},",
+            "}"
+        ],
+        "description": "pub(crate) enum … { … }"
+    },
+
+
+    "pub mod-block": {
+        "prefix": "pmod-block",
+        "body": ["pub mod ${1:name} {", "    ${2:// add code here}", "}"],
+        "description": "pub mod … { … }"
+    },
+    "pub(crate) mod-block": {
+        "prefix": "pcmod-block",
+        "body": ["pub(crate) mod ${1:name} {", "    ${2:// add code here}", "}"],
+        "description": "pub(crate) mod … { … }"
+    },
+    "pub(super) mod-block": {
+        "prefix": "psmod-block",
+        "body": ["pub(super) mod ${1:name} {", "    ${2:// add code here}", "}"],
+        "description": "pub(super) mod … { … }"
+    },
+
+
+    "pub static": {
+        "prefix": "pstatic",
+        "body": ["pub static ${1:STATIC}: ${2:Type} = ${4:init};"],
+        "description": "pub static …: … = …;"
+    },
+   "pub(crate) static": {
+        "prefix": "pcstatic",
+        "body": ["pub(crate) static ${1:STATIC}: ${2:Type} = ${4:init};"],
+        "description": "pub(crate) static …: … = …;"
+    },
+   "pub(super) static": {
+        "prefix": "psstatic",
+        "body": ["pub(super) static ${1:STATIC}: ${2:Type} = ${4:init};"],
+        "description": "pub(super) static …: … = …;"
+    },
+
+
+    "pub struct-tuple": {
+        "prefix": "pstruct-tuple",
+        "body": ["pub struct ${1:Name}(${2:Type});"],
+        "description": "pub struct …(…);"
+    },
+    "pub(crate) struct-tuple": {
+        "prefix": "pcstruct-tuple",
+        "body": ["pub(crate) struct ${1:Name}(${2:Type});"],
+        "description": "pub(crate) struct …(…);"
+    },
+    "pub(super) struct-tuple": {
+        "prefix": "psstruct-tuple",
+        "body": ["pub(super) struct ${1:Name}(${2:Type});"],
+        "description": "pub(super) struct …(…);"
+    },
+
+
+    "pub struct-unit": {
+        "prefix": "pstruct-unit",
+        "body": ["pub struct ${1:Name};"],
+        "description": "pub struct …;"
+    },
+    "pub(crate) struct-unit": {
+        "prefix": "pcstruct-unit",
+        "body": ["pub(crate) struct ${1:Name};"],
+        "description": "pub(crate) struct …;"
+    },
+    "pub(super) struct-unit": {
+        "prefix": "psstruct-unit",
+        "body": ["pub(super) struct ${1:Name};"],
+        "description": "pub(super) struct …;"
+    },
+
+
+    "pub struct": {
+        "prefix": "pstruct",
+        "body": [
+            "#[derive(Debug)]",
+            "pub struct ${1:Name} {",
+            "    ${2:field}: ${3:Type}",
+            "}"
+        ],
+        "description": "pub struct … { … }"
+    },
+    "pub(crate) struct": {
+        "prefix": "pcstruct",
+        "body": [
+            "#[derive(Debug)]",
+            "pub(crate) struct ${1:Name} {",
+            "    ${2:field}: ${3:Type}",
+            "}"
+        ],
+        "description": "pub(crate) struct … { … }"
+    },
+    "pub(super) struct": {
+        "prefix": "psstruct",
+        "body": [
+            "#[derive(Debug)]",
+            "pub(super) struct ${1:Name} {",
+            "    ${2:field}: ${3:Type}",
+            "}"
+        ],
+        "description": "pub(super) struct … { … }"
+    },
+
+    "result main": {
+        "prefix": "mainr",
+        "body": ["use std::error::Error;", "", "fn main() -> Result<(), Box<dyn Error>> {", "    ${1:todo!();}", "    Ok(())", "}"],
+        "description": "fn main() -> Result<(), Box<dyn Error>> { … }"
+    }
+}
